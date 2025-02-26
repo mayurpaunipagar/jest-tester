@@ -67,7 +67,31 @@ test("adding floating point numbers", () => {
     const value = 0.1 + 0.2;
     // expect(value).toBe(0.3); this will not work because of rounding error
     expect(value).toBeCloseTo(0.3); // this will work
-
-
 })
 
+/* Strings */
+
+test('String tester1 : there is no I in team', () => {
+    expect('team').not.toMatch(/I/)
+})
+
+test('String tester2 : but there is a stop in "Christoph"', () => {
+    expect('stop').toMatch(/stop/)
+})
+
+
+/*
+Arrays and iterables
+You can check if an array or iterable contains a particular item using toContain:
+*/
+const shoppingList = [
+    'diapers',
+    'kleenex',
+    'trash bags',
+    'paper towels',
+    'milk',
+]
+test('Array1: shop list has milk on it',()=>{
+    expect(shoppingList).toContain('milk');
+    expect(new Set(shoppingList)).toContain('milk');
+})
