@@ -1,9 +1,9 @@
-const fetchData = require("./asynchronous");
+const fetchData = require("./asynchronous")
 
-test('the data is peanut butter',()=>{
-    return fetchData().then(data=>{
-        console.log({data})
-        return  expect(data).toBe('peanut butter') //fails
+test('the data is peanut butter', () => {
+    return fetchData().then(data => {
+        console.log({ data })
+        return expect(data).toBe('peanut butter') //fails
     });
 })
 
