@@ -10,3 +10,4 @@ test('compiling android goes as expected',()=>{
     expect(() => compileAndroid()).toThrow(/^you are using the wrong JDK$/); // Test fails -> in my case this passes 
     // expect(() => compileAndroid()).toThrow(/^you are using the wrong JDK!$/); // Test pass -> in my case this fails
 })
+
